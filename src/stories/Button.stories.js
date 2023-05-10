@@ -1,8 +1,13 @@
 import Button from "./../components/Button";
 
 export default {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
+  argTypes: {
+    handleClick: {
+      action: "handleClick",
+    },
+  },
 };
 
 const Template = (args) => <Button {...args} />;
@@ -12,4 +17,32 @@ Red.args = {
   backgroundColor: "red",
   label: "Press Me",
   size: "md",
+};
+
+export const Green = Template.bind({});
+Green.args = {
+  backgroundColor: "green",
+  label: "Press Me",
+  size: "md",
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  backgroundColor: "red",
+  label: "Press Me",
+  size: "sm",
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  backgroundColor: "red",
+  label: "Press Me",
+  size: "lg",
+};
+
+export const LongLabel = Template.bind({});
+LongLabel.args = {
+  backgroundColor: "red",
+  label: "Really Long label of Button",
+  size: "lg",
 };
